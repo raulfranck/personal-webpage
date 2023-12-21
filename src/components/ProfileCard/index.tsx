@@ -4,6 +4,7 @@ import { FaGithubAlt } from "react-icons/fa";
 import { ImYoutube } from "react-icons/im";
 import { FaLinkedinIn } from "react-icons/fa";
 import { ISocialMedia } from "@/app/interfaces/socialMedia";
+import { PiInstagramLogoBold } from "react-icons/pi";
 
 const socialMedia: ISocialMedia[] = [
   {
@@ -21,11 +22,16 @@ const socialMedia: ISocialMedia[] = [
     href: "https://www.linkedin.com/in/raul-franck-6b9a0a1b2/",
     icon: <FaLinkedinIn className=" text-sky-100 h-6 w-6" />,
   },
+  {
+    name: "Instagram",
+    href: "https://instagram.com",
+    icon: <PiInstagramLogoBold className=" text-sky-100 h-6 w-6" />,
+  },
 ];
 
 export const ProfileCard = () => {
   return (
-    <section className="bg-zinc-900 flex flex-col justify-center gap-5 items-center rounded-lg p-10">
+    <section className="bg-zinc-900 max-h-[450px] flex flex-col justify-center gap-5 items-center min-w-[300px] rounded-lg p-10">
       <div>
         <Image
           className="rounded-full border-2 border-sky-500 p-2"
