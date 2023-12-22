@@ -11,12 +11,12 @@ const config: Config = {
       container: {
         center: true,
       },
-      screens: {
-        sm: '480px',
-        md: '600px',
-        lg: '976px',
-        xl: '1000px',
-      },
+      // screens: {
+      //   sm: '480px',
+      //   md: '600px',
+      //   lg: '976px',
+      //   xl: '1000px',
+      // },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
       }

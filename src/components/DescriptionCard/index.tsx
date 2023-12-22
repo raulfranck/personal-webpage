@@ -2,7 +2,7 @@ export const DescriptionCard = () => {
   return (
     <>
       <section className="bg-zinc-900 flex flex-col justify-center gap-5 items-center rounded-lg p-10">
-        <div className="flex flex-col items-center start">
+        <div className="flex flex-col items-center">
           <h1 className="text-3xl text-sky-100">Sobre mim</h1>
         </div>
         <p className="text-sky-100">
