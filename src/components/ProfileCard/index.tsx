@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const ProfileCard = () => {
   return (
-    <section className="bg-zinc-900 max-h-[450px]  flex flex-col justify-center gap-5 items-center min-w-[300px] rounded-lg p-10">
+    <section className="bg-zinc-900 w-[100%] md:max-h-[450px]  flex flex-col justify-center gap-5 items-center md:min-w-[300px] rounded-lg p-10">
       <div>
         <Image
           className="rounded-full border-2 border-sky-500 p-2"
