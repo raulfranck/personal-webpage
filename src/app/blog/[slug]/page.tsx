@@ -19,12 +19,18 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
 
   return (
     <article className="text-gray-300">
-      <div className="mb-8 text-center">
+      <div className="my-8 text-center border-b border-sky-500 pb-5">
+        <h1 className="text-3xl font-bold">{post.title}</h1>
         <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
           {new Intl.DateTimeFormat("en-US").format(new Date(post.date))}
         </time>
-
-        <h1 className="text-3xl font-bold">{post.title}</h1>
+        <div className="flex justify-center flex-column gap-2 mt-4">
+          {post.stack?.map((stack) => (
+            <p className="text-gray-400 rounded-lg bg-zinc-800 p-1 px-2 font-bold">
+              {stack}
+            </p>
+          ))}
+        </div>
       </div>
       <Mdx code={post.body.code} />
     </article>

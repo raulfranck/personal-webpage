@@ -20,7 +20,7 @@ const components = {
   h2: ({ className, ...props }) => (
     <h2
       className={clsx(
-        "mt-10 scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0 text-sky-900",
+        "mt-10 scroll-m-20  text-3xl font-semibold tracking-tight first:mt-0 text-sky-100",
         className
       )}
       {...props}
@@ -71,7 +71,7 @@ const components = {
   p: ({ className, ...props }) => (
     <p
       className={clsx(
-        "leading-7 [&:not(:first-child)]:mt-6 text-sky-100",
+        "py-0 [&:not(:first-child)]:mt-6 text-sky-100",
         className
       )}
       {...props}
@@ -101,14 +101,10 @@ const components = {
     ...props
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
-    <img
-      className={clsx("rounded-md border border-zinc-200", className)}
-      alt={alt}
-      {...props}
-    />
+    <img className={clsx(className)} alt={alt} {...props} />
   ),
   hr: ({ ...props }) => (
-    <hr className="my-4 border-zinc-900 md:my-8 w-full" {...props} />
+    <hr className="my-4 border-sky-500 md:my-8 w-full" {...props} />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="w-full my-6 overflow-y-auto">
@@ -168,7 +164,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
 
   return (
-    <div className="w-[95%] m-auto md:w-[90%]">
+    <div className="py-10 w-[95%] m-auto md:w-[75%]">
       <Component components={components} />
     </div>
   );
