@@ -45,7 +45,10 @@ const Header = () => {
               <li key={item.name}>
                 <Link
                   className={`${
-                    pathname === item.href ? "text-sky-500" : "text-sky-100"
+                    pathname === item.href ||
+                    pathname.startsWith(item.href + "/")
+                      ? "text-sky-500"
+                      : "text-sky-100"
                   }  hover:text-sky-500 duration-300`}
                   href={item.href}
                 >
