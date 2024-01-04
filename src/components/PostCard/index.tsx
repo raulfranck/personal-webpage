@@ -13,7 +13,7 @@ export default function PostCard(post: Post) {
 
         <div className="flex flex-column gap-2 mt-2">
           {post.stack?.map((stack) => (
-            <p className="text-gray-400 rounded-lg bg-zinc-800 p-1 font-bold">
+            <p className="text-gray-400 rounded-lg bg-zinc-800 p-1 px-2 font-bold">
               {stack}
             </p>
           ))}

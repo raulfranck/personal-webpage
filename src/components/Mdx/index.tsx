@@ -168,7 +168,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
 
   return (
-    <div className="w-[95%] m-auto md:w-[60%]">
+    <div className="w-[95%] m-auto md:w-[90%]">
       <Component components={components} />
     </div>
   );
